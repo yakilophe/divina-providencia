@@ -168,6 +168,18 @@
       </article>`).join("");
   }
 
+  function pintarSellos() {
+    $("#cajaSellos").innerHTML = `
+      <div class="sellos__cuando">
+        ${SELLOS.cuando.map((t) => `<p>${icono("reloj")} ${esc(t)}</p>`).join("")}
+      </div>
+      <p class="sellos__no">${esc(SELLOS.noHay)}</p>
+      <div class="sellos__reglas">
+        <p class="aviso__etq">${icono("campana")} Importante</p>
+        <ol>${SELLOS.reglas.map((r) => `<li>${esc(r)}</li>`).join("")}</ol>
+      </div>`;
+  }
+
   const ICONO_SERVICIO = { confesiones: "cruz", enfermos: "corazon", bautizos: "gente", intenciones: "libro" };
   function pintarServicios() {
     $("#listaServicios").innerHTML = SERVICIOS.map((s) => `
@@ -348,6 +360,7 @@
   pintarAvisos();
   pintarEventos();
   pintarCatecismo();
+  pintarSellos();
   pintarServicios();
   pintarPastorales();
   pintarGaleria();

@@ -280,6 +280,19 @@ main:focus { outline: none; }
 .tarjeta__pie .boton { min-height: 48px; padding: 8px 18px; font-size: .88em; }
 .nota { font-size: .85em; color: var(--suave); }
 
+/* ---------- Sellos de boleta ---------- */
+.sellos { background: var(--sup); border: 1px solid var(--linea); border-top: 3px solid var(--oro); border-radius: var(--radio); padding: 18px; box-shadow: var(--sombra); display: grid; gap: 14px; }
+.sellos__cuando { display: grid; gap: 8px; }
+.sellos__cuando p { display: flex; align-items: center; gap: 10px; background: var(--chip); color: var(--acento); font-weight: 700; border-radius: 12px; padding: 10px 14px; }
+.sellos__cuando svg { color: var(--oro); font-size: 1.2em; }
+.sellos__no { text-align: center; font-weight: 700; color: #c62828; border: 1.5px dashed #e7a3a3; border-radius: 12px; padding: 10px; }
+:root[data-theme="dark"] .sellos__no { color: #ff8a80; border-color: #6b3434; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sellos__no { color: #ff8a80; border-color: #6b3434; } }
+.sellos__reglas { background: var(--sup-2); border-left: 4px solid var(--oro); border-radius: 12px; padding: 14px 16px; }
+.sellos__reglas ol { margin: 4px 0 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.sellos__reglas li { font-weight: 700; }
+.sellos__reglas li::marker { color: var(--oro-texto); }
+
 /* ---------- Pastorales ---------- */
 .pastorales { display: grid; gap: 10px; }
 @media (min-width: 640px) { .pastorales { grid-template-columns: repeat(2, 1fr); } }

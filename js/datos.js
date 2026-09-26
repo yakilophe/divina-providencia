@@ -115,6 +115,23 @@ const CATECISMO = [
 ];
 
 /* --------------------------------------------------------------------------
+   SELLOS DE BOLETA DEL CATECISMO
+   -------------------------------------------------------------------------- */
+const SELLOS = {
+  cuando: [
+    "Al terminar la misa del sábado",
+    "Al terminar las misas del domingo",
+    "Un sello de Hora Santa cada mes",
+  ],
+  noHay: "Entre semana NO hay sellos.",
+  reglas: [
+    "Espere a que termine la misa. Antes no se sella.",
+    "Fórmese en la fila y espere hasta que se le indique.",
+    "Mantenga el orden: no corra ni se pase por los laterales del templo.",
+  ],
+};
+
+/* --------------------------------------------------------------------------
    SACRAMENTOS Y SERVICIOS
    encargada: debe coincidir con un "area" de CONTACTOS (o dejarse vacío)
    -------------------------------------------------------------------------- */
@@ -197,6 +214,8 @@ const PREGUNTAS = [
     r: "En la página \"Misas\" toque \"Ofrecer mi casa\" y deje su nombre, teléfono y dirección. La encargada se comunicará con usted." },
   { p: "¿Qué necesito para bautizar a mi hijo?",
     r: "Los papás y padrinos deben tomar las pláticas prebautismales. Traiga el acta de nacimiento del niño." },
+  { p: "¿Cuándo sellan la boleta del catecismo?",
+    r: "Al terminar la misa del sábado y las misas del domingo. Entre semana no hay sellos. También hay un sello de Hora Santa cada mes. Espere a que termine la misa, fórmese hasta que se le indique y no corra por los laterales del templo." },
   { p: "¿Cuándo es el catecismo?",
     r: "Urbi Villa del Vergel: viernes 6:30 PM. Paseos de la Providencia: 10:00 AM y 5:00 PM. Villa Elena: 9:00 AM." },
   { p: "¿Pueden llevarle la Comunión a un enfermo?",

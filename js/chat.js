@@ -45,6 +45,15 @@
         `<br><br>${ir("catecismo", "Ver sedes y cómo llegar")}`,
     },
     {
+      id: "sellos", boton: "Sellos de boleta",
+      claves: ["sello", "sellos", "boleta", "boletas", "sellar", "firma"],
+      resp: () => `<b>Sellos de boleta del catecismo:</b><br>` +
+        SELLOS.cuando.map((t) => `• ${U.esc(t)}`).join("<br>") +
+        `<br><b>${U.esc(SELLOS.noHay)}</b><br><br><b>Importante:</b><br>` +
+        SELLOS.reglas.map((r, i) => `${i + 1}. ${U.esc(r)}`).join("<br>") +
+        `<br><br>${ir("catecismo", "Ver en Catecismo")}`,
+    },
+    {
       id: "hora-santa", boton: "Hora Santa",
       claves: ["hora santa", "adoracion", "adoración", "santisimo", "santísimo"],
       resp: () => HORA_SANTA.hora

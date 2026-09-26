@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=202609261503">
 </head>
 <body>
 
@@ -364,8 +364,9 @@
   <p id="visorTxt"></p>
 </dialog>
 
-<script src="js/datos.js"></script>
-<script src="js/app.js"></script>
-<script src="js/chat.js"></script>
+<!-- datos.js se carga siempre fresco para que los cambios semanales se vean de inmediato -->
+<script>document.write('<script src="js/datos.js?t=' + Date.now() + '"><\/script>');</script>
+<script src="js/app.js?v=202609261503"></script>
+<script src="js/chat.js?v=202609261503"></script>
 </body>
 </html>

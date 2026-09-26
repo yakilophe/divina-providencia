@@ -141,6 +141,7 @@ main:focus { outline: none; }
 
 .titulo-bloque { font-size: 1.15em; margin: 34px 0 12px; display: flex; align-items: center; gap: 12px; }
 .titulo-bloque::after { content: ""; flex: 1; height: 1px; background: var(--linea); }
+.titulo-bloque--primero { margin-top: 0; }
 .nota-bloque { color: var(--suave); margin-bottom: 16px; }
 
 /* Adorno línea — cruz — línea */

@@ -126,8 +126,8 @@ const SELLOS = {
   noHay: "Entre semana NO hay sellos.",
   reglas: [
     "Espere a que termine la misa. Antes no se sella.",
-    "Fórmese en la fila y espere hasta que se le indique.",
-    "Mantenga el orden: no corra ni se pase por los laterales del templo.",
+    "Fórmese por los LATERALES del templo y espere hasta que se le indique.",
+    "NO pase por el altar. Camine con orden y sin correr.",
   ],
 };
 
@@ -215,7 +215,7 @@ const PREGUNTAS = [
   { p: "¿Qué necesito para bautizar a mi hijo?",
     r: "Los papás y padrinos deben tomar las pláticas prebautismales. Traiga el acta de nacimiento del niño." },
   { p: "¿Cuándo sellan la boleta del catecismo?",
-    r: "Al terminar la misa del sábado y las misas del domingo. Entre semana no hay sellos. También hay un sello de Hora Santa cada mes. Espere a que termine la misa, fórmese hasta que se le indique y no corra por los laterales del templo." },
+    r: "Al terminar la misa del sábado y las misas del domingo. Entre semana no hay sellos. También hay un sello de Hora Santa cada mes. Espere a que termine la misa, fórmese por los laterales del templo hasta que se le indique y no pase por el altar." },
   { p: "¿Cuándo es el catecismo?",
     r: "Urbi Villa del Vergel: viernes 6:30 PM. Paseos de la Providencia: 10:00 AM y 5:00 PM. Villa Elena: 9:00 AM." },
   { p: "¿Pueden llevarle la Comunión a un enfermo?",

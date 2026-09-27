@@ -30,17 +30,19 @@ const TEMPLO = {
    MISAS FIJAS EN EL TEMPLO   dia: 0=domingo, 1=lunes … 6=sábado
    -------------------------------------------------------------------------- */
 const MISAS_FIJAS = [
+  { dia: 4, hora: "19:30", nota: "Misa y Hora Santa" },
   { dia: 6, hora: "19:30" },
   { dia: 0, hora: "09:30" },
   { dia: 0, hora: "12:30" },
   { dia: 0, hora: "18:00" },
 ];
 
-/* Hora Santa — escriba el día y la hora cuando se confirme */
+/* Jueves: misa y después Hora Santa (con confesiones) */
 const HORA_SANTA = {
-  dia: "Jueves",            // ← confirmar
-  hora: "",                 // ← ej. "20:00"   (vacío = "Por confirmar")
+  dia: "Jueves",
+  hora: "19:30",
   lugar: "En el templo",
+  detalle: "Misa a las 7:30 PM y después la Hora Santa. Durante la Hora Santa hay confesiones.",
 };
 
 /* --------------------------------------------------------------------------
@@ -48,6 +50,27 @@ const HORA_SANTA = {
    Copie un bloque { … }, cambie los datos y ponga una coma entre bloques.
    -------------------------------------------------------------------------- */
 const MISAS_ENTRE_SEMANA = [
+  {
+    fecha: "2026-09-28",
+    hora: "",             // ← falta la hora, ej. "19:00"
+    lugar: "Calle San Antonio #130",
+    direccion: "",
+    mapa: "",
+  },
+  {
+    fecha: "2026-09-30",
+    hora: "",             // ← falta la hora
+    lugar: "Calle San Felipe #111",
+    direccion: "Urbi Villa del Vergel",
+    mapa: "",
+  },
+  {
+    fecha: "2026-10-02",
+    hora: "",             // ← falta la hora
+    lugar: "Calle San Francisco de Asís #132",
+    direccion: "",
+    mapa: "",
+  },
   // {
   //   fecha: "2026-09-30",
   //   hora: "19:00",
@@ -81,6 +104,13 @@ const AVISOS = [
    EVENTOS PRÓXIMOS
    -------------------------------------------------------------------------- */
 const EVENTOS = [
+  {
+    fecha: "2026-10-11",
+    hora: "10:30",
+    titulo: "Pláticas prebautismales",
+    lugar: "Templo La Divina Providencia",
+    descripcion: "De 10:30 AM a 2:30 PM. Incluye misa. Para padres y padrinos.",
+  },
   // {
   //   fecha: "2026-10-12",
   //   hora: "18:00",
@@ -139,8 +169,8 @@ const SERVICIOS = [
   {
     id: "confesiones",
     titulo: "Confesiones",
-    horario: "Antes de cada misa",                     // ← confirmar
-    texto: "Acérquese al sacerdote antes de que empiece la misa.",
+    horario: "Jueves, en la Hora Santa",
+    texto: "Los jueves, después de la misa de 7:30 PM, durante la Hora Santa puede confesarse.",
     encargada: "",
   },
   {
@@ -153,8 +183,8 @@ const SERVICIOS = [
   {
     id: "bautizos",
     titulo: "Pláticas prebautismales",
-    horario: "Por confirmar",                          // ← ej. "Primer sábado del mes, 5:00 PM"
-    texto: "Padres y padrinos deben tomar las pláticas antes del bautizo. Traiga el acta de nacimiento del niño.",
+    horario: "2.º domingo de cada mes · 10:30 AM a 2:30 PM",
+    texto: "Padres y padrinos deben tomar las pláticas antes del bautizo. Incluye la misa.",
     encargada: "Pláticas prebautismales",
   },
   {
@@ -208,12 +238,16 @@ const FOTOS = [
 const PREGUNTAS = [
   { p: "¿A qué hora es la misa del fin de semana?",
     r: "Sábado 7:30 PM. Domingo 9:30 AM, 12:30 PM y 6:00 PM, en el Templo La Divina Providencia." },
+  { p: "¿Cuándo es la Hora Santa?",
+    r: "Los jueves. Hay misa a las 7:30 PM y después la Hora Santa. Durante la Hora Santa puede confesarse." },
+  { p: "¿Cuándo puedo confesarme?",
+    r: "Los jueves durante la Hora Santa, después de la misa de 7:30 PM." },
   { p: "¿Hay misa entre semana?",
     r: "Sí, pero cambia de lugar cada semana porque se celebra en casas de familias. Revise la página \"Misas\" o nuestro Facebook." },
   { p: "¿Cómo ofrezco mi casa para una misa?",
     r: "En la página \"Misas\" toque \"Ofrecer mi casa\" y deje su nombre, teléfono y dirección. La encargada se comunicará con usted." },
   { p: "¿Qué necesito para bautizar a mi hijo?",
-    r: "Los papás y padrinos deben tomar las pláticas prebautismales. Traiga el acta de nacimiento del niño." },
+    r: "Papás y padrinos deben tomar las pláticas prebautismales: el segundo domingo de cada mes, de 10:30 AM a 2:30 PM (incluye misa)." },
   { p: "¿Cuándo sellan la boleta del catecismo?",
     r: "Al terminar la misa del sábado y las misas del domingo. Entre semana no hay sellos. También hay un sello de Hora Santa cada mes. Espere a que termine la misa, fórmese por los laterales del templo hasta que se le indique y no pase por el altar." },
   { p: "¿Cuándo es el catecismo?",

@@ -24,7 +24,7 @@
       resp: () => {
         const p = window.PROXIMA_MISA;
         return (p ? `La próxima misa es <b>${p.cuando} a las ${p.hora}</b> en ${U.esc(p.lugar)}.<br><br>` : "") +
-          `En el templo:<br>• <b>Sábado</b> 7:30 PM<br>• <b>Domingo</b> 9:30 AM, 12:30 PM y 6:00 PM<br><br>${ir("misas", "Ver horarios")}`;
+          `En el templo:<br>• <b>Jueves</b> 7:30 PM (y después Hora Santa)<br>• <b>Sábado</b> 7:30 PM<br>• <b>Domingo</b> 9:30 AM, 12:30 PM y 6:00 PM<br><br>${ir("misas", "Ver horarios")}`;
       },
     },
     {
@@ -33,7 +33,7 @@
       resp: () => {
         const l = U.misasEntreSemanaVigentes();
         const lista = l.length
-          ? l.slice(0, 4).map((m) => `• <b>${U.fechaTexto(m._f)}</b>, ${U.hora12(m.hora)} — ${U.esc(m.lugar)}`).join("<br>")
+          ? l.slice(0, 4).map((m) => `• <b>${U.fechaTexto(m._f)}</b>, ${m.hora ? U.hora12(m.hora) : "hora por confirmar"} — ${U.esc(m.lugar)}`).join("<br>")
           : "Todavía no se publican las de esta semana.";
         return `Las misas entre semana cambian de casa cada semana.<br><br>${lista}<br><br>${ir("misas", "Ver misas entre semana")} · ${ir("ofrecer", "Ofrecer mi casa")}`;
       },
@@ -57,7 +57,7 @@
       id: "hora-santa", boton: "Hora Santa",
       claves: ["hora santa", "adoracion", "adoración", "santisimo", "santísimo"],
       resp: () => HORA_SANTA.hora
-        ? `La Hora Santa es el <b>${U.esc(HORA_SANTA.dia)} a las ${U.hora12(HORA_SANTA.hora)}</b>, ${U.esc(HORA_SANTA.lugar).toLowerCase()}.`
+        ? `<b>${U.esc(HORA_SANTA.dia)} ${U.hora12(HORA_SANTA.hora)}</b>: ${U.esc(HORA_SANTA.detalle || "")}`
         : `El horario de la Hora Santa está por confirmarse. Le avisaremos en ${ir("avisos", "Avisos")} y en Facebook.`,
     },
     {

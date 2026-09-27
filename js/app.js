@@ -67,10 +67,12 @@
     $("#horasSabado").innerHTML = horasDe(6).map(li).join("");
     $("#horasDomingo").innerHTML = horasDe(0).map(li).join("");
     $("#horaSanta").innerHTML = HORA_SANTA.hora
-      ? `<li>${hora12(HORA_SANTA.hora)}<small>${esc(HORA_SANTA.dia)} · ${esc(HORA_SANTA.lugar)}</small></li>`
+      ? `<li>${hora12(HORA_SANTA.hora)}<small>Misa y Hora Santa</small></li>`
       : `<li class="pendiente">Por confirmar</li>`;
     $("#resSabado").textContent = horasDe(6).map(hora12).join(" · ");
     $("#resDomingo").innerHTML = horasDe(0).map(hora12).join("<br>");
+    $("#horaSantaNota").textContent = HORA_SANTA.hora ? HORA_SANTA.detalle || "" : "";
+    $("#resJueves").textContent = HORA_SANTA.hora ? `${hora12(HORA_SANTA.hora)} · Misa y Hora Santa` : "Hora Santa por confirmar";
   }
 
   function misasEntreSemanaVigentes() {
@@ -86,7 +88,7 @@
           ${bloqueFecha(m._f)}
           <div>
             <h3>${esc(m.lugar || "Misa")}</h3>
-            <p class="hora">${fechaTexto(m._f)} · ${hora12(m.hora)}</p>
+            <p class="hora">${fechaTexto(m._f)} · ${m.hora ? hora12(m.hora) : "Hora por confirmar"}</p>
             ${m.direccion ? `<p>${esc(m.direccion)}</p>` : ""}
             ${m.mapa ? `<a class="enlace-mapa" href="${esc(m.mapa)}" target="_blank" rel="noopener">${icono("pin")} Cómo llegar</a>` : ""}
           </div>
@@ -104,7 +106,7 @@
         candidatas.push({ f: new Date(d.getFullYear(), d.getMonth(), d.getDate(), h, mi), lugar: "Templo La Divina Providencia", hora });
       });
     }
-    misasEntreSemanaVigentes().forEach((m) => candidatas.push({ f: m._f, lugar: m.lugar, hora: m.hora }));
+    misasEntreSemanaVigentes().filter((m) => m.hora).forEach((m) => candidatas.push({ f: m._f, lugar: m.lugar, hora: m.hora }));
     // una misa se sigue mostrando hasta 45 minutos después de empezar
     return candidatas.filter((c) => c.f.getTime() + 45 * 60000 > ahora.getTime()).sort((a, b) => a.f - b.f)[0];
   }

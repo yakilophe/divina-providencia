@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=202609261504">
+  <link rel="stylesheet" href="css/styles.css?v=202609271532">
 </head>
 <body>
 
@@ -98,6 +98,7 @@
       <div class="resumen">
         <div class="resumen__dia"><span>Sábado</span><strong id="resSabado"></strong></div>
         <div class="resumen__dia"><span>Domingo</span><strong id="resDomingo"></strong></div>
+        <div class="resumen__dia resumen__dia--ancho"><span>Jueves</span><strong id="resJueves"></strong></div>
       </div>
 
       <div id="avisoInicio"></div>
@@ -130,7 +131,7 @@
       <div class="horarios">
         <article class="dia"><h2>Sábado</h2><ul class="horas" id="horasSabado"></ul></article>
         <article class="dia"><h2>Domingo</h2><ul class="horas" id="horasDomingo"></ul></article>
-        <article class="dia"><h2>Hora Santa</h2><ul class="horas" id="horaSanta"></ul></article>
+        <article class="dia"><h2>Jueves</h2><ul class="horas" id="horaSanta"></ul><p class="dia__nota" id="horaSantaNota"></p></article>
       </div>
       <p class="lugar-fijo"><svg><use href="#i-pin"/></svg> En el templo · <a href="#/ubicacion">Cómo llegar</a></p>
 
@@ -367,7 +368,7 @@
 
 <!-- datos.js se carga siempre fresco para que los cambios semanales se vean de inmediato -->
 <script>document.write('<script src="js/datos.js?t=' + Date.now() + '"><\/script>');</script>
-<script src="js/app.js?v=202609261504"></script>
-<script src="js/chat.js?v=202609261504"></script>
+<script src="js/app.js?v=202609271532"></script>
+<script src="js/chat.js?v=202609271532"></script>
 </body>
 </html>

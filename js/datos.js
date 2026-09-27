@@ -149,11 +149,11 @@ const CATECISMO = [
    -------------------------------------------------------------------------- */
 const SELLOS = {
   cuando: [
-    "Al terminar la misa del sábado",
-    "Al terminar las misas del domingo",
-    "Un sello de Hora Santa cada mes",
+    "Misa de precepto: sábado 7:30 PM",
+    "Misas del domingo: 9:30 AM, 12:30 PM y 6:00 PM",
   ],
-  noHay: "Entre semana NO hay sellos.",
+  noHay: "Sólo se sella en esas misas. Las misas entre semana NO tienen sello.",
+  horaSanta: "Los niños deben ir a la Hora Santa UNA VEZ AL MES para su sello. Es los jueves: misa a las 7:30 PM y después la Hora Santa.",
   reglas: [
     "Espere a que termine la misa. Antes no se sella.",
     "Fórmese por los LATERALES del templo y espere hasta que se le indique.",
@@ -249,7 +249,7 @@ const PREGUNTAS = [
   { p: "¿Qué necesito para bautizar a mi hijo?",
     r: "Papás y padrinos deben tomar las pláticas prebautismales: el segundo domingo de cada mes, de 10:30 AM a 2:30 PM (incluye misa)." },
   { p: "¿Cuándo sellan la boleta del catecismo?",
-    r: "Al terminar la misa del sábado y las misas del domingo. Entre semana no hay sellos. También hay un sello de Hora Santa cada mes. Espere a que termine la misa, fórmese por los laterales del templo hasta que se le indique y no pase por el altar." },
+    r: "Sólo en la misa de precepto (sábado 7:30 PM) y en las misas del domingo, al terminar la misa. Las misas entre semana no tienen sello. Además, los niños deben ir una vez al mes a la Hora Santa del jueves (7:30 PM) para su sello. Espere a que termine la misa, fórmese por los laterales del templo hasta que se le indique y no pase por el altar." },
   { p: "¿Cuándo es el catecismo?",
     r: "Urbi Villa del Vergel: viernes 6:30 PM. Paseos de la Providencia: 10:00 AM y 5:00 PM. Villa Elena: 9:00 AM." },
   { p: "¿Pueden llevarle la Comunión a un enfermo?",

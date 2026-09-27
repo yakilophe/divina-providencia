@@ -176,6 +176,7 @@
         ${SELLOS.cuando.map((t) => `<p>${icono("reloj")} ${esc(t)}</p>`).join("")}
       </div>
       <p class="sellos__no">${esc(SELLOS.noHay)}</p>
+      ${SELLOS.horaSanta ? `<div class="sellos__hs">${icono("cruz")}<p><strong>Hora Santa · una vez al mes</strong>${esc(SELLOS.horaSanta)}</p></div>` : ""}
       <div class="sellos__reglas">
         <p class="aviso__etq">${icono("campana")} Importante</p>
         <ol>${SELLOS.reglas.map((r) => `<li>${esc(r)}</li>`).join("")}</ol>
